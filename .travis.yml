@@ -1,0 +1,15 @@
+language: scala
+scala:
+  - 2.12.10
+jdk:
+  - openjdk8
+
+sudo: false
+cache:
+  directories:
+    - "$HOME/.cache"
+    - "$HOME/.ivy2/cache"
+    - "$HOME/.sbt/boot"
+
+script:
+  - sbt ++$TRAVIS_SCALA_VERSION clean test
